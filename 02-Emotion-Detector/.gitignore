@@ -1,10 +1,37 @@
+# Virtual Environment
 venv/
+.env
+
+# Python Cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-dataset/
-trainer/
-output/
+# Jupyter
+.ipynb_checkpoints/
 
-.idea/
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# IDE
 .vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Model Files (optional)
+model/*.pkl
+
+# Output Files
+output/
+trainer/
+
+# Dataset (optional)
+dataset/
+
+# Logs
+*.log

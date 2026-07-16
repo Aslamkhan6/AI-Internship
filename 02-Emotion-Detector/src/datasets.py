@@ -18,7 +18,12 @@ class Emotiondataset:
                 f"\nDataset not found:\n{self.datasetpath}"
             )
 
-        self.dataframe = pd.read_csv(self.datasetpath)
+        self.dataframe = pd.read_csv(
+       self.datasetpath,
+       sep=";",
+       names=["text", "emotion"],
+       header = None
+)
 
         print("Dataset loaded successfully")
 
@@ -41,10 +46,10 @@ class Emotiondataset:
         print(
             self.dataframe.isnull().sum()
         )
-
+        print(self.dataframe.describe())
         print("#### datasets data ####")
 
     # get the dataset
     def getdataframe(self):
-
-        return self.dataframe
+       
+       return self.dataframe

@@ -1,14 +1,15 @@
 import re
 import string
 import nltk
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import wordpunct_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+nltk.download("wordnet")
+nltk.download("punkt")
+nltk.download("stopwords")
 
 class Preprocessor:
-    nltk.download("wordnet")
-    nltk.download("punkt")
-    nltk.download("stopwords")
+   
     lemmatizer = WordNetLemmatizer()
     def __init__(self,text):
         self.text = text
@@ -40,8 +41,8 @@ class Preprocessor:
 
     #tokanization
     def tokanization(self):
-        self.text = word_tokenize(self.text)
-        return self.text     
+      self.text = wordpunct_tokenize(self.text)
+      return self.text    
 
 
     def removeStopWord(self):
@@ -66,7 +67,7 @@ class Preprocessor:
         self.text = lemtxt
         return self.text
 
-    def preprocessor(self):
+    def preprocess(self):
       
        self.lowerCase() 
        self.removePunctation()
