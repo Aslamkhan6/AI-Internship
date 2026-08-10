@@ -1,0 +1,36 @@
+# Virtual environment
+personal_assistant/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables / secrets
+.env
+.env.*
+config.py
+.config
+.config/
+.openai
+.openai/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Build / package files
+*.egg-info/
+*.dist-info/
+
+# Generated files
+output/
+outputs/
+temp/
+tmp/
+
+.requirements.txt
